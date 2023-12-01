@@ -1,5 +1,5 @@
 {% extends "./base.html" %}
-{% comment %} {% load media %} {% endcomment %}
+
 {% block start %}
         <div class="container  mt-5">
 
@@ -19,6 +19,7 @@
           </div>
           
           {{recipe.recipe_image}}
+
           <div class="form-group">
             <label for="exampleFormControlFile1">Add Recipe Picture</label>
             <input name="recipe_image" required type="file" class="form-control-file" id="exampleFormControlFile1" required>
@@ -29,7 +30,6 @@
         </div>
         <br>
         <br>
-          {% comment %} {{recipes}} {% endcomment %}
       <div >
       <table class="table table-bordered table-dark w-100">
           <thead>
@@ -57,10 +57,9 @@
                 <br>
               <div>
                 <a  href="{% url 'delete_recipe' recipe.id %}"  class="btn btn-danger">Delete</a>
-                {% comment %} <a  href="/vege/delete_recipe/{{recipe.id}}"  class="btn btn-danger">Delete</a> {% endcomment %}
               </div>
               </td>
-              </tr>
+            </tr>
             {% endfor %}
           </tbody>
       </table>

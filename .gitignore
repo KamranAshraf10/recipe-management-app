@@ -6,3 +6,5 @@ migrations/
 __pycache__/
 *.pyc
 base/
+admin/
+staticfiles/
